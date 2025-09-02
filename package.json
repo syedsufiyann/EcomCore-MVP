@@ -1,0 +1,23 @@
+{
+  "name": "ecomcore-mvp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syedsufiyann/EcomCore-MVP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syedsufiyann/EcomCore-MVP/issues"
+  },
+  "homepage": "https://github.com/syedsufiyann/EcomCore-MVP#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
