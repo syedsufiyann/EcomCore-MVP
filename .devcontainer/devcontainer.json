@@ -1,0 +1,17 @@
+{
+  "name": "Node.js & PostgreSQL",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app", // This should be the name of your application service in docker-compose.yml
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "forwardPorts": [3000, 5432], // Forward your app port (e.g., 3000) and PostgreSQL port
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode.vscode-typescript-javascript-grammar",
+        "ms-ossdata.vscode-postgresql" // PostgreSQL extension for VS Code (optional but helpful)
+      ]
+    }
+  }
+}

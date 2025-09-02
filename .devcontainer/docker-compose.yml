@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: ..             # Context is the root of your repository
+      dockerfile: .devcontainer/Dockerfile # Path to the Dockerfile
+    volumes:
+      - ..:/workspaces/${localWorkspaceFolderBasename}:cached
+    command: sleep infinity
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: your_database_name
+      POSTGRES_USER: your_username
+      POSTGRES_PASSWORD: your_password
+    ports:
+      - "5432:5432"
+
+volumes:
+  pgdata:
